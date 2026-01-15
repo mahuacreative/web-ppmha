@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mengupas Indahnya Idul Fitri - Pondok Pesantren Mafatihul Huda Al‑Ihsani</title>
+  <meta name="description" content="Makna kembali suci dan nilai silaturahmi dalam tradisi santri saat merayakan Idul Fitri di pondok pesantren.">
+  <meta name="theme-color" content="#0a8b53" />
+
+  <!-- Preconnect & Preload untuk Optimasi Performa -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Great+Vibes&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="style.css" as="style">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> -->
+  <script src="script.js" defer></script>
+
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  </noscript>
+</head>
+<body>
+  <div id="reading-progress-bar"></div>
+  <div class="cursor-follower"><span></span></div>
+  <button class="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <header class="header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Kembali ke Beranda">
+        <div class="brand-logo-wrap tilt-3d"><img class="brand-logo" src="bahan/img/PPMHA.webp" alt="Logo PPMHA"><div class="logo-glow"></div></div>
+        <span class="brand-text-wrapper"><span class="brand-text">Pondok Pesantren</span><span class="brand-name">Mafatihul Huda Al‑Ihsani</span></span>
+      </a>
+      <nav class="desktop-nav" role="navigation" aria-label="Navigasi utama">
+        <ul>
+            <li><a href="index.html#beranda" data-section="beranda" class="nav-link"><i class="fa-solid fa-house"></i> <span>Beranda</span></a></li>
+            <li><a href="index.html#tentang" data-section="tentang" class="nav-link"><i class="fa-solid fa-circle-info"></i> <span>Tentang</span></a></li>
+            <li><a href="artikel.html" data-section="pena" class="nav-link"><i class="fa-solid fa-pen-nib"></i> <span>Pena Santri</span></a></li>
+            <li><a href="index.html#kontak" data-section="kontak" class="nav-link"><i class="fa-solid fa-phone"></i> <span>Kontak</span></a></li>
+            <li class="nav-dashboard-link" style="display: none;"><a href="dashboard.html" data-section="dashboard" class="nav-link"><i class="fa-solid fa-user-shield"></i> <span>Portal Santri</span></a></li>
+        </ul>
+        <div class="nav-indicator" aria-hidden="true"></div>
+      </nav>
+      <div class="header-actions">
+        <div class="social">
+            <a class="magnetic" href="https://www.facebook.com/ppmha/?locale=id_ID" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a class="magnetic" href="https://www.instagram.com/ppmha/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="magnetic" href="https://www.youtube.com/c/PPMHA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <a href="login.html" class="btn btn-secondary btn-login magnetic"><span>Masuk</span> <i class="fa-solid fa-right-to-bracket"></i></a>
+        <a href="#" id="logoutBtn" class="btn btn-secondary btn-logout magnetic" style="display: none;"><span>Keluar</span> <i class="fa-solid fa-right-from-bracket"></i></a>
+      </div>
+    </div>
+  </header>
+  
+  <div class="mobile-nav-controls">
+    <button class="menu-btn magnetic" id="menuBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileNavPanel"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span><span class="btn-wave"></span></button>
+    <nav class="mobile-nav-panel" id="mobileNavPanel" role="navigation" aria-label="Navigasi mobile">
+      <div class="panel-aura"></div>
+      <ul class="nav-links">
+        <li><a href="index.html#beranda" data-section="beranda"><i class="fa-solid fa-house"></i> <span>Beranda</span></a></li>
+        <li><a href="index.html#tentang" data-section="tentang"><i class="fa-solid fa-circle-info"></i> <span>Tentang</span></a></li>
+        <li><a href="artikel.html" data-section="pena"><i class="fa-solid fa-pen-nib"></i> <span>Pena Santri</span></a></li>
+        <li><a href="index.html#kontak" data-section="kontak"><i class="fa-solid fa-phone"></i> <span>Kontak</span></a></li>
+        <li class="nav-dashboard-link" style="display: none;"><a href="dashboard.html" data-section="dashboard"><i class="fa-solid fa-user-shield"></i> <span>Portal Santri</span></a></li>
+        <li class="nav-login-link"><a href="login.html" data-section="login"><i class="fa-solid fa-right-to-bracket"></i> <span>Masuk/Daftar</span></a></li>
+      </ul>
+      <div class="mobile-socials">
+        <div class="social">
+            <a href="https://www.facebook.com/ppmha/?locale=id_ID" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ppmha/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/PPMHA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </div>
+
+  <main>
+    <article class="article-post" id="article-body">
+      <header class="article-header reveal">
+        <div class="container">
+          <span class="badge"><i class="fa-solid fa-star"></i> Populer</span>
+          <h1>Mengupas Indahnya Idul Fitri</h1>
+          <div class="article-meta">
+            <span>Oleh: Tim Jurnalistik Santri</span> &bull;
+            <span>Dipublikasikan pada: 1 Syawal 1446 H</span>
+          </div>
+        </div>
+      </header>
+     <div> 
+      
+      <div class="article-content container reveal">
+        <figure class="article-featured-image reveal parallax-wrap">
+        <img src="bahan/img/thumb-idulfitri.webp" alt="Suasana malam takbiran di halaman pesantren." fetchpriority="high">
+      </figure>
+        <p><strong>Idul Fitri</strong>, sering disebut Lebaran, bukan sekadar hari kemenangan setelah sebulan penuh berpuasa. Bagi santri, Idul Fitri adalah momen puncak refleksi spiritual, perayaan kebersamaan, dan pengejawantahan nilai-nilai luhur yang telah dipelajari sepanjang tahun. Suasananya begitu khas, berbeda dengan perayaan di rumah.</p>
+        <p>Gema takbir yang bersahut-sahutan dari menara masjid pesantren menjadi penanda dimulainya perayaan. Para santri, dengan pakaian terbaik mereka, berkumpul di lapangan untuk melaksanakan shalat Ied. Khutbah yang disampaikan oleh Kiai Pengasuh bukan hanya wejangan, tetapi juga suntikan semangat untuk terus menjadi insan yang lebih baik.</p>
+        <h2>Makna Kesucian dan Silaturahmi</h2>
+        <p>Tradisi utama setelah shalat adalah <em>sungkeman</em> atau bersalam-salaman. Ini bukan sekadar jabat tangan biasa. Para santri berbaris rapi untuk memohon maaf lahir dan batin kepada para kiai, asatidz (guru), dan sesama santri. Momen ini penuh haru dan menjadi simbol kembali suci, membersihkan hati dari segala khilaf.</p>
+        <blockquote><p>Sungkem kepada Kiai bukan hanya soal adab, tapi soal mencari berkah. Di sanalah keridhaan ilmu kami harapkan.</p></blockquote>
+        <p>Setelah itu, acara dilanjutkan dengan makan bersama. Menu opor ayam dan ketupat mungkin terdengar biasa, tetapi ketika dinikmati bersama ribuan santri lainnya di halaman pesantren, rasanya menjadi luar biasa istimewa.</p>
+        <h3>Kegiatan Unik di Pesantren</h3>
+        <ul><li><strong>Lomba Takbir Keliling:</strong> Antar-asrama bersaing menampilkan kreativitas dalam melantunkan takbir.</li><li><strong>Pentas Seni Islami:</strong> Menampilkan hadrah, nasyid, dan pembacaan puisi dari para santri.</li><li><strong>Ziarah Maqbarah:</strong> Mengunjungi makam para pendiri dan sesepuh pesantren untuk mendoakan mereka.</li></ul>
+        <p>Idul Fitri di pesantren adalah pelajaran hidup. Ia mengajarkan tentang pentingnya memaafkan, indahnya kebersamaan dalam kesederhanaan, dan cara merayakan kemenangan spiritual dengan penuh rasa syukur. Sebuah pengalaman yang akan selalu terpatri di hati setiap santri.</p>
+        <hr>
+        <div class="article-actions reveal">
+          <a href="artikel.html" class="btn btn-secondary magnetic"><i class="fa-solid fa-arrow-left"></i> Kembali ke Semua Artikel</a>
+        </div>
+      </div>
+    </div> 
+    </article>
+  </main>
+  
+  <footer class="footer">
+    <div class="container"><p>&copy; 2025 Pondok Pesantren Mafatihul Huda Al‑Ihsani. All rights reserved.</p></div>
+  </footer>
+</body>
+</html>

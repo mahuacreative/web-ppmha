@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal Santri - Pondok Pesantren Mafatihul Huda Al‑Ihsani</title>
+  <meta name="description" content="Portal Wali Santri untuk memantau data, administrasi, nilai, dan absensi santri.">
+  <meta name="theme-color" content="#0a8b53" />
+  <meta name="robots" content="noindex, nofollow"> <!-- Mencegah halaman ini diindeks oleh Google -->
+  <script>document.documentElement.classList.add('has-js');</script>
+
+  <!-- Preconnect & Preload untuk Optimasi Performa -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="style.css" as="style">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
+</head>
+<body class="dashboard-page">
+  <div class="cursor-follower"><span></span></div>
+  
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a class="brand" href="index.html" aria-label="Kembali ke Beranda">
+          <div class="brand-logo-wrap"><img class="brand-logo" src="bahan/img/PPMHA.webp" alt="Logo PPMHA"></div>
+          <span class="brand-name">Portal Santri</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#profil" class="sidebar-link active" data-target="profil-content"><i class="fa-solid fa-user-circle"></i><span>Profil Santri</span></a></li>
+          <li><a href="#administrasi" class="sidebar-link" data-target="administrasi-content"><i class="fa-solid fa-file-invoice-dollar"></i><span>Administrasi</span></a></li>
+          <li><a href="#nilai" class="sidebar-link" data-target="nilai-content"><i class="fa-solid fa-graduation-cap"></i><span>Nilai & Raport</span></a></li>
+          <li><a href="#absensi" class="sidebar-link" data-target="absensi-content"><i class="fa-solid fa-clipboard-user"></i><span>Absensi</span></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" id="logoutBtnDashboard" class="btn btn-secondary magnetic"><i class="fa-solid fa-right-from-bracket"></i> <span>Keluar</span></a>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <h1 id="dashboard-title">Profil Santri</h1>
+        <div class="header-user">
+          <span class="user-greeting">Assalamu'alaikum, <strong id="waliName">Wali Santri</strong></span>
+          <img src="bahan/img/default-profile.webp" alt="Foto profil wali santri" class="user-avatar">
+        </div>
+      </header>
+
+      <div class="dashboard-content-area">
+        <!-- #1 KONTEN PROFIL SANTRI -->
+        <section id="profil-content" class="dashboard-content active">
+          <div class="card-grid">
+            <div class="profile-card card">
+              <div class="profile-avatar-wrapper">
+                <img src="bahan/img/default-santri.webp" alt="Foto Santri" class="profile-avatar">
+                <span class="profile-status">Santri Aktif</span>
+              </div>
+              <div class="profile-info">
+                <h2 id="santriName">Muhammad Al-Fatih</h2>
+                <p id="santriNis">NIS: 123456789</p>
+                <div class="info-grid">
+                  <div><i class="fa-solid fa-layer-group"></i> <strong>Kelas:</strong> <span id="santriKelas">3 Wustho A</span></div>
+                  <div><i class="fa-solid fa-building-columns"></i> <strong>Kamar:</strong> <span id="santriKamar">Blok C, Kamar 12</span></div>
+                  <div><i class="fa-solid fa-cake-candles"></i> <strong>Lahir:</strong> <span id="santriTtl">Malang, 10 Mei 2010</span></div>
+                  <div><i class="fa-solid fa-map-marker-alt"></i> <strong>Alamat:</strong> <span id="santriAlamat">Jl. Merdeka No. 1, Surabaya</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- #2 KONTEN ADMINISTRASI -->
+        <section id="administrasi-content" class="dashboard-content">
+          <div class="card-grid">
+            <div class="data-card card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-file-invoice-dollar"></i> Riwayat Pembayaran SPP</h3>
+              </div>
+              <div class="table-wrapper">
+                <table class="data-table">
+                  <thead><tr><th>Bulan</th><th>Tanggal Bayar</th><th>Jumlah</th><th>Status</th></tr></thead>
+                  <tbody>
+                    <tr><td>Juli 2025</td><td>5 Juli 2025</td><td>Rp 500.000</td><td><span class="tag tag-success">Lunas</span></td></tr>
+                    <tr><td>Juni 2025</td><td>4 Juni 2025</td><td>Rp 500.000</td><td><span class="tag tag-success">Lunas</span></td></tr>
+                    <tr><td>Mei 2025</td><td>1 Mei 2025</td><td>Rp 500.000</td><td><span class="tag tag-success">Lunas</span></td></tr>
+                    <tr><td>April 2025</td><td>-</td><td>-</td><td><span class="tag tag-pending">Belum Lunas</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- #3 KONTEN NILAI & RAPORT -->
+        <section id="nilai-content" class="dashboard-content">
+          <div class="card-grid">
+            <div class="data-card card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-book"></i> Nilai Diniyah Semester Ganjil</h3>
+                <a href="#" class="btn btn-primary magnetic"><i class="fa-solid fa-download"></i> Unduh Raport</a>
+              </div>
+              <div class="table-wrapper">
+                <table class="data-table">
+                  <thead><tr><th>Mata Pelajaran</th><th>KKM</th><th>Nilai</th><th>Predikat</th></tr></thead>
+                  <tbody>
+                    <tr><td>Fiqih</td><td>75</td><td>88</td><td>A (Sangat Baik)</td></tr>
+                    <tr><td>Aqidah Akhlak</td><td>75</td><td>92</td><td>A (Sangat Baik)</td></tr>
+                    <tr><td>Nahwu</td><td>75</td><td>80</td><td>B (Baik)</td></tr>
+                    <tr><td>Shorof</td><td>75</td><td>78</td><td>B (Baik)</td></tr>
+                    <tr><td>Tahfidz</td><td>80</td><td>95</td><td>A (Sangat Baik)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- #4 KONTEN ABSENSI -->
+        <section id="absensi-content" class="dashboard-content">
+          <div class="card-grid">
+            <div class="data-card card">
+              <div class="card-header"><h3><i class="fa-solid fa-chart-pie"></i> Rekap Kehadiran Bulan Ini</h3></div>
+              <div class="stats-grid">
+                <div class="stat-item"><span class="stat-value">95%</span><span class="stat-label">Hadir</span></div>
+                <div class="stat-item"><span class="stat-value">5%</span><span class="stat-label">Izin</span></div>
+                <div class="stat-item"><span class="stat-value">0%</span><span class="stat-label">Sakit</span></div>
+                <div class="stat-item"><span class="stat-value">0%</span><span class="stat-label">Alpha</span></div>
+              </div>
+            </div>
+            <div class="data-card card">
+              <div class="card-header"><h3><i class="fa-solid fa-clipboard-user"></i> Rincian Absensi</h3></div>
+              <div class="table-wrapper">
+                 <table class="data-table">
+                  <thead><tr><th>Tanggal</th><th>Kegiatan</th><th>Status</th></tr></thead>
+                  <tbody>
+                    <tr><td>16 Agu 2025</td><td>Sekolah Diniyah</td><td><span class="tag tag-success">Hadir</span></td></tr>
+                    <tr><td>15 Agu 2025</td><td>Sekolah Diniyah</td><td><span class="tag tag-success">Hadir</span></td></tr>
+                    <tr><td>14 Agu 2025</td><td>Sekolah Diniyah</td><td><span class="tag tag-warning">Izin</span></td></tr>
+                    <tr><td>13 Agu 2025</td><td>Sekolah Diniyah</td><td><span class="tag tag-success">Hadir</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

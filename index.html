@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pondok Pesantren Mafatihul Huda Al‑Ihsani</title>
+  <meta name="description" content="Website resmi Pondok Pesantren Mafatihul Huda Al‑Ihsani. Informasi profil, kegiatan, artikel, dan kontak.">
+  <meta name="theme-color" content="#0a8b53" />
+
+
+  <!-- Preconnect & Preload untuk Optimasi Performa -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Great+Vibes&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" as="image" href="bahan/img/asrama.webp" fetchpriority="high">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+ <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> -->
+
+  
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  </noscript>
+</head>
+<body>
+  <div class="cursor-follower"><span></span></div>
+  <button class="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <header class="header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Kembali ke Beranda">
+        <div class="brand-logo-wrap tilt-3d"><img class="brand-logo" src="bahan/img/PPMHA.webp" alt="Logo PPMHA"><div class="logo-glow"></div></div>
+        <span class="brand-text-wrapper"><span class="brand-text">Pondok Pesantren</span><span class="brand-name">Mafatihul Huda Al‑Ihsani</span></span>
+      </a>
+      <nav class="desktop-nav" role="navigation" aria-label="Navigasi utama"> 
+        <ul>
+            <li><a href="#beranda" data-section="beranda" class="nav-link"><i class="fa-solid fa-house"></i> <span>Beranda</span></a></li>
+            <li><a href="#tentang" data-section="tentang" class="nav-link"><i class="fa-solid fa-circle-info"></i> <span>Tentang</span></a></li>
+            <li><a href="artikel.html" data-section="pena" class="nav-link"><i class="fa-solid fa-pen-nib"></i> <span>Pena Santri</span></a></li>
+            <li><a href="#kontak" data-section="kontak" class="nav-link"><i class="fa-solid fa-phone"></i> <span>Kontak</span></a></li>
+            <!-- Link Dashboard - Awalnya disembunyikan, ditampilkan via JS jika login -->
+            <li class="nav-dashboard-link" style="display: none;"><a href="dashboard.html" data-section="dashboard" class="nav-link"><i class="fa-solid fa-user-shield"></i> <span>Portal Santri</span></a></li>
+        </ul>
+        <div class="nav-indicator" aria-hidden="true"></div>
+      </nav>
+      <div class="header-actions">
+        <div class="social">
+            <a class="magnetic" href="https://www.facebook.com/ppmha/?locale=id_ID" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a class="magnetic" href="https://www.instagram.com/ppmha/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="magnetic" href="https://www.youtube.com/c/PPMHA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <a href="login.html" class="btn btn-secondary btn-login magnetic"><span>Masuk</span> <i class="fa-solid fa-right-to-bracket"></i></a>
+        <!-- Tombol Logout - Awalnya disembunyikan -->
+        <a href="#" id="logoutBtn" class="btn btn-secondary btn-logout magnetic" style="display: none;"><span>Keluar</span> <i class="fa-solid fa-right-from-bracket"></i></a>
+      </div>
+    </div>
+  </header>
+  
+  <div class="mobile-nav-controls">
+    <button class="menu-btn magnetic" id="menuBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileNavPanel"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span><span class="btn-wave"></span></button>
+    <nav class="mobile-nav-panel" id="mobileNavPanel" role="navigation" aria-label="Navigasi mobile">
+      <div class="panel-aura"></div>
+      <ul class="nav-links">
+        <li><a href="#beranda" data-section="beranda"><i class="fa-solid fa-house"></i> <span>Beranda</span></a></li>
+        <li><a href="#tentang" data-section="tentang"><i class="fa-solid fa-circle-info"></i> <span>Tentang</span></a></li>
+        <li><a href="artikel.html" data-section="pena"><i class="fa-solid fa-pen-nib"></i> <span>Pena Santri</span></a></li>
+        <li><a href="#kontak" data-section="kontak"><i class="fa-solid fa-phone"></i> <span>Kontak</span></a></li>
+        <li class="nav-dashboard-link" style="display: none;"><a href="dashboard.html" data-section="dashboard"><i class="fa-solid fa-user-shield"></i> <span>Portal Santri</span></a></li>
+        <li class="nav-login-link"><a href="login.html" data-section="login"><i class="fa-solid fa-right-to-bracket"></i> <span>Masuk / Daftar</span></a></li>
+      </ul>
+      <div class="mobile-socials">
+        <div class="social">
+            <a href="https://www.facebook.com/ppmha/?locale=id_ID" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ppmha/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/PPMHA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </div>
+
+  <main>
+    <section class="hero" id="beranda" aria-labelledby="hero-title-main" data-scroll-section>
+      <canvas class="hero-particles" aria-hidden="true"></canvas>
+      <div class="hero-slides" aria-hidden="true"><div class="hero-slide show" style="background-image:url('bahan/img/asrama.webp')"></div><div class="hero-slide" style="background-image:url('bahan/img/gerbang.webp')"></div><div class="hero-slide" style="background-image:url('bahan/img/ndalem.webp')"></div><div class="hero-slide" style="background-image:url('bahan/img/P3MHA.webp')"></div></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-stack" id="heroStack">
+          <div class="hero-logo-container tilt-3d"><img class="hero-logo" src="bahan/img/PPMHA.webp" alt="Logo PPMHA"><div class="logo-ring"></div></div>
+          <div class="hero-text-group">
+            <h1 class="hero-welcome hero-text-line"><span>Selamat Datang di</span></h1><p class="hero-subtitle hero-text-line"><span>Pondok Pesantren</span></p><h2 class="hero-title hero-text-line" id="hero-title-main"><span>Mafatihul Huda Al‑Ihsani</span></h2>
+            <div class="hero-cta"><a href="#tentang" class="btn btn-primary magnetic"><span>Jelajahi</span><i class="fa-solid fa-arrow-down"></i></a><a href="artikel.html" class="btn btn-ghost magnetic"><span>Pena Santri</span><i class="fa-solid fa-pen-nib"></i></a></div>
+          </div>
+        </div>
+        <div class="scroll-hint magnetic"><span class="dot"></span> Gulir ke bawah</div>
+      </div>
+      <div class="hero-nav" aria-label="Navigasi slide"><button class="nav-btn magnetic" id="prevSlide" aria-label="Slide sebelumnya"><i class="fa-solid fa-chevron-left"></i></button><button class="nav-btn magnetic" id="nextSlide" aria-label="Slide berikutnya"><i class="fa-solid fa-chevron-right"></i></button></div>
+    </section>
+
+    <div class="populer-wrap">
+      <section class="section" id="populer" aria-labelledby="populer-title">
+        <div class="container">
+          <h2 id="populer-title" class="section-title reveal"><i class="fa-solid fa-fire"></i> Terpopuler</h2>
+          <div class="grid">
+            <article class="card reveal soft-tilt" data-tilt><div class="card-spotlight"></div><a class="thumb ripple" href="artikel-detail.html" aria-label="Baca artikel Mengupas Indahnya Idul Fitri"><img class="lazy-img" src="bahan/img/thumb-idulfitri.webp" alt="Suasana malam takbiran." loading="lazy" decoding="async"><span class="thumb-overlay"></span></a><div class="card-content"><span class="badge"><i class="fa-solid fa-star"></i> Populer</span><h3><a href="artikel-detail.html" class="card-title-link">Mengupas Indahnya Idul Fitri</a></h3><p>Makna kembali suci dan nilai silaturahmi dalam tradisi santri.</p><a class="more" href="artikel-detail.html">Lihat Selengkapnya <i class="fa-solid fa-arrow-right"></i></a></div></article>
+            <article class="card reveal soft-tilt" data-tilt><div class="card-spotlight"></div><a class="thumb ripple" href="artikel-detail.html" aria-label="Baca artikel Kegiatan Santri"><img class="lazy-img" src="bahan/img/asrama.webp" alt="Santri mengaji kitab." loading="lazy" decoding="async"><span class="thumb-overlay"></span></a><div class="card-content"><span class="badge"><i class="fa-solid fa-book-open"></i> Kegiatan</span><h3><a href="artikel-detail.html" class="card-title-link">Kegiatan Santri: Ngaji Kitab Setiap Pekan</a></h3><p>Rutinitas kajian kitab kuning yang penuh keberkahan.</p><a class="more" href="artikel-detail.html">Lihat Selengkapnya <i class="fa-solid fa-arrow-right"></i></a></div></article>
+            <article class="card reveal soft-tilt" data-tilt><div class="card-spotlight"></div><a class="thumb ripple" href="artikel-detail.html" aria-label="Baca artikel Sejarah Singkat Pondok"><img class="lazy-img" src="bahan/img/PPMHA.webp" alt="Logo PPMHA." loading="lazy" decoding="async" style="object-fit:contain;background:#f3f6f4"><span class="thumb-overlay"></span></a><div class="card-content"><span class="badge"><i class="fa-solid fa-circle-info"></i> Profil</span><h3><a href="artikel-detail.html" class="card-title-link">Sejarah Singkat Pondok Mafatihul Huda Al‑Ihsani</a></h3><p>Perjalanan dakwah dan pendidikan dari masa ke masa.</p><a class="more" href="artikel-detail.html">Lihat Selengkapnya <i class="fa-solid fa-arrow-right"></i></a></div></article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section" id="tentang" aria-labelledby="tentang-title" data-scroll-section>
+      <div class="container">
+        <div class="about">
+          <div class="reveal">
+            <span class="chip"><i class="fa-solid fa-seedling"></i> Tentang Kami</span>
+            <h2 id="tentang-title" class="section-title" style="margin-top:10px">Mencetak Generasi <span class="gradient-text">Berakhlak & Berilmu</span></h2>
+            <p>Pondok Pesantren Mafatihul Huda Al‑Ihsani berkomitmen menghadirkan pendidikan yang menyeimbangkan ilmu agama dan keterampilan hidup. Dengan tradisi pesantren yang kuat, kami membimbing santri agar berakhlak mulia, berwawasan luas, dan bermanfaat bagi masyarakat.</p>
+            <p>Program utama kami meliputi: <strong>ngaji kitab kuning</strong>, <strong>tahfiz Al‑Qur'an</strong>, pembinaan <strong>kajian ke-NU‑an</strong>, serta kegiatan kreatif seperti <strong>jurnalistik santri</strong> dan <strong>desain dakwah</strong>.</p>
+            <div class="about-stats"><div class="stat reveal-s"><span class="num" data-count="1200">0</span><span>Santri</span></div><div class="stat reveal-s"><span class="num" data-count="45">0</span><span>Asatidz</span></div><div class="stat reveal-s"><span class="num" data-count="25">0</span><span>Tahun</span></div></div>
+          </div>
+          <div class="about-media reveal parallax-wrap"><div class="media-glow"></div><img src="bahan/img/ndalem.webp" alt="Suasana depan ndalem kiai." loading="lazy" decoding="async" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pena" aria-labelledby="pena-title" data-scroll-section style="background-color: var(--green-50);">
+      <div class="container">
+        <h2 id="pena-title" class="section-title reveal"><i class="fa-solid fa-pen-nib"></i> Pena Santri</h2>
+        <p class="section-sub reveal">Tulisan, gagasan, dan karya kreatif dari para santri Pondok Pesantren Mafatihul Huda Al-Ihsani.</p>
+        <div class="grid" style="margin-top:2rem">
+          <article class="card reveal soft-tilt" data-tilt><div class="card-spotlight"></div><a class="thumb ripple" href="artikel-detail.html"><img class="lazy-img" src="bahan/img/P3MHA.webp" alt="Santri berbaris rapi." loading="lazy" decoding="async"><span class="thumb-overlay"></span></a><div class="card-content"><span class="badge"><i class="fa-solid fa-feather"></i> Catatan</span><h3><a href="artikel-detail.html" class="card-title-link">Catatan Kajian Ahad Pagi: Adab Menuntut Ilmu</a></h3><p>Ringkas namun mengena: adab santri yang tak lekang dimakan waktu.</p><a class="more" href="artikel-detail.html">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a></div></article>
+          <article class="card reveal soft-tilt" data-tilt><div class="card-spotlight"></div><a class="thumb ripple" href="artikel-detail.html"><img class="lazy-img" src="bahan/img/gerbang.webp" alt="Gerbang utama pondok." loading="lazy" decoding="async"><span class="thumb-overlay"></span></a><div class="card-content"><span class="badge"><i class="fa-solid fa-clock"></i> Tips</span><h3><a href="artikel-detail.html" class="card-title-link">Manajemen Waktu Ala Santri</a></h3><p>Kunci produktif: disiplin, prioritas, dan keberkahan waktu.</p><a class="more" href="artikel-detail.html">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a></div></article>
+          <article class="card reveal soft-tilt" data-tilt><div class="card-spotlight"></div><a class="thumb ripple" href="artikel-detail.html"><img class="lazy-img" src="bahan/img/asrama.webp" alt="Gedung asrama santri." loading="lazy" decoding="async"><span class="thumb-overlay"></span></a><div class="card-content"><span class="badge"><i class="fa-solid fa-microphone-lines"></i> Puisi</span><h3><a href="artikel-detail.html" class="card-title-link">Senandung Malam di Serambi Mushola</a></h3><p>Puisi tentang rindu, doa, dan cahaya ilmu.</p><a class="more" href="artikel-detail.html">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        </div>
+        <div class="section-actions reveal"><a class="btn btn-primary magnetic" href="artikel.html" aria-label="Lihat semua artikel Pena Santri">Lihat Semua Artikel <i class="fa-solid fa-arrow-right"></i></a></div>
+      </div>
+    </section>
+
+    <section class="section" id="kontak" aria-labelledby="kontak-title" data-scroll-section>
+      <div class="container">
+        <h2 id="kontak-title" class="section-title reveal"><i class="fa-solid fa-phone"></i> Kontak & Lokasi</h2>
+        <div class="contact">
+          <address class="contact-card reveal" role="group" aria-labelledby="kontak-info-title">
+            <h3 id="kontak-info-title" class="sr-only">Informasi Kontak</h3>
+            <div class="contact-row"><i class="fa-solid fa-location-dot"></i><div><strong>Alamat</strong><br><span>Jl. Pesantren, Desa Putat Lor, Gondanglegi, Malang, Jawa Timur</span></div></div>
+            <div class="contact-row"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><br><a href="https://wa.me/6282301105096" target="_blank" rel="noopener noreferrer">+62 823-0110-5096</a></div></div>
+            <div class="contact-row"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><br><a href="mailto:info@ppmha.sch.id">info@ppmha.sch.id</a></div></div>
+          </address>
+          <div class="map-wrap reveal"><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.333182189913!2d112.65341221535773!3d-8.16269188410298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd62023aaaaaaab%3A0xb09652b5c67f6cf1!2sPondok%20Pesantren%20Mafatihul%20Huda%20Al-Ihsani!5e0!3m2!1sen!2sid!4v1680000000000!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi PPMHA"></iframe></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container"><p>&copy; 2025 Pondok Pesantren Mafatihul Huda Al‑Ihsani. All rights reserved.</p></div>
+  </footer>
+</body>
+</html>

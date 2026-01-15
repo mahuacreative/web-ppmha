@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Masuk atau Daftar - Pondok Pesantren Mafatihul Huda Al‑Ihsani</title>
+  <meta name="description" content="Masuk atau buat akun baru untuk mengakses Portal Wali Santri.">
+  <meta name="theme-color" content="#0a8b53" />
+  <script>document.documentElement.classList.add('has-js');</script>
+
+  <!-- Preconnect & Preload untuk Optimasi Performa -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="style.css" as="style">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
+</head>
+<body class="auth-page">
+  <div class="cursor-follower"><span></span></div>
+
+  <header class="header header-minimal">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Kembali ke Beranda">
+        <div class="brand-logo-wrap"><img class="brand-logo" src="bahan/img/PPMHA.webp" alt="Logo PPMHA"></div>
+        <span class="brand-text-wrapper"><span class="brand-text">Pondok Pesantren</span><span class="brand-name">Mafatihul Huda Al‑Ihsani</span></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-container">
+      <div class="auth-wrapper" id="authWrapper">
+        <!-- Form Masuk (Login) -->
+        <div class="auth-form-container sign-in-container">
+          <form id="signInForm" action="#" novalidate>
+            <h1>Masuk Portal</h1>
+            <div class="social-container">
+              <a href="#" class="social magnetic" aria-label="Masuk dengan Google"><i class="fa-brands fa-google"></i></a>
+              <a href="#" class="social magnetic" aria-label="Masuk dengan Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <span>atau gunakan akun wali santri</span>
+            <div class="input-group">
+                <input type="email" id="signInEmail" placeholder=" " required />
+                <label for="signInEmail">Email</label>
+                <i class="fa-solid fa-envelope"></i>
+                <div class="input-error-message" aria-live="polite"></div>
+            </div>
+            <div class="input-group">
+                <input type="password" id="signInPassword" placeholder=" " required />
+                <label for="signInPassword">Password</label>
+                <i class="fa-solid fa-lock"></i>
+                <div class="input-error-message" aria-live="polite"></div>
+            </div>
+            <a href="#">Lupa password?</a>
+            <button type="submit" class="btn btn-primary magnetic">Masuk</button>
+            <p class="form-message" aria-live="assertive"></p>
+            <button type="button" class="mobile-auth-switch" id="mobileSwitchToSignUp">Belum punya akun? Daftar</button>
+          </form>
+        </div>
+
+        <!-- Form Daftar (Sign Up) -->
+        <div class="auth-form-container sign-up-container">
+          <form id="signUpForm" action="#" novalidate>
+            <h1>Buat Akun</h1>
+            <div class="social-container">
+                <a href="#" class="social magnetic" aria-label="Daftar dengan Google"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="social magnetic" aria-label="Daftar dengan Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <span>atau gunakan email untuk mendaftar</span>
+            <div class="input-group">
+                <input type="text" id="signUpName" placeholder=" " required />
+                <label for="signUpName">Nama Lengkap</label>
+                <i class="fa-solid fa-user"></i>
+                <div class="input-error-message" aria-live="polite"></div>
+            </div>
+            <div class="input-group">
+                <input type="email" id="signUpEmail" placeholder=" " required />
+                <label for="signUpEmail">Email</label>
+                <i class="fa-solid fa-envelope"></i>
+                <div class="input-error-message" aria-live="polite"></div>
+            </div>
+            <div class="input-group">
+                <input type="password" id="signUpPassword" placeholder=" " required minlength="8" />
+                <label for="signUpPassword">Password</label>
+                <i class="fa-solid fa-lock"></i>
+                <div class="input-error-message" aria-live="polite"></div>
+            </div>
+            <button type="submit" class="btn btn-primary magnetic">Daftar</button>
+            <p class="form-message" aria-live="assertive"></p>
+            <button type="button" class="mobile-auth-switch" id="mobileSwitchToSignIn">Sudah punya akun? Masuk</button>
+          </form>
+        </div>
+
+        <!-- Overlay untuk animasi switch di Desktop -->
+        <div class="auth-overlay-container">
+          <div class="auth-overlay">
+            <div class="auth-overlay-panel auth-overlay-left">
+              <h1>Selamat Datang Kembali!</h1>
+              <p>Untuk mengakses Portal Wali Santri, silakan masuk dengan akun Anda.</p>
+              <button class="btn btn-ghost" id="signInBtn">Masuk</button>
+            </div>
+            <div class="auth-overlay-panel auth-overlay-right">
+              <h1>Assalamu'alaikum!</h1>
+              <p>Daftarkan diri Anda untuk memantau perkembangan santri.</p>
+              <button class="btn btn-ghost" id="signUpBtn">Daftar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
